@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votar - VotaYa</title>
+    <link rel="stylesheet" href="https://dev-bit-oficial.github.io/vota-ya/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1 class="logo">VotaYa</h1>
+                <div class="user-info">
+                    <div class="user-profile">
+                        <img id="profile-pic" src="https://via.placeholder.com/32" alt="Foto de perfil">
+                        <span id="username">usuario</span>
+                    </div>
+                    <button id="logout-button" class="btn btn-icon">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <div class="voting-card">
+                <div class="voting-header">
+                    <h2>Votación: Mejoras para nuestra comunidad</h2>
+                    <p>Selecciona una opción para mejorar nuestra comunidad. Tu voto es importante.</p>
+                </div>
+                
+                <div class="voting-content">
+                    <div id="voting-options" class="voting-options">
+                        <div class="radio-option">
+                            <input type="radio" id="opcion1" name="voto" value="opcion1">
+                            <label for="opcion1">Opción 1: Usuario 1</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="opcion2" name="voto" value="opcion2">
+                            <label for="opcion2">Opción 2: Usuario 2</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="opcion3" name="voto" value="opcion3">
+                            <label for="opcion3">Opción 3:  Usuario 3</label>
+                        </div>
+                    </div>
+                    
+                    <div id="voting-results" class="voting-results hidden">
+                        <div class="success-message">
+                            <p>¡Gracias por tu voto! Has votado por: <span id="voted-option"></span></p>
+                        </div>
+                        
+                        <div class="results-container">
+                            <h3>Resultados actuales:</h3>
+                            <div class="result-item">
+                                <div class="result-header">
+                                    <span>Opción 1: Usuario 1</span>
+                                    <span id="result-opcion1-percent">0% (0 votos)</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div id="progress-opcion1" class="progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-header">
+                                    <span>Opción 2: Usuario 2</span>
+                                    <span id="result-opcion2-percent">0% (0 votos)</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div id="progress-opcion2" class="progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-header">
+                                    <span>Opción 3: Usuario 3</span>
+                                    <span id="result-opcion3-percent">0% (0 votos)</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div id="progress-opcion3" class="progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div class="total-votes">
+                                Total: <span id="total-votes">0</span> votos
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="voting-footer" class="voting-footer">
+                    <button id="vote-button" class="btn btn-primary btn-full" disabled>
+                        Enviar mi voto
+                    </button>
+                </div>
+            </div>
+            
+            <div class="info-card">
+                <div class="dates-info">
+                    <h4>Fechas importantes:</h4>
+                    <ul>
+                        <li>Inicio de votación: 1 de marzo, 2025</li>
+                        <li>Cierre de votación: 15 de marzo, 2025</li>
+                        <li>Anuncio de resultados: 20 de marzo, 2025</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer-content">
+                <p>© 2025 VotaYa. Todos los derechos reservados.</p>
+                <div class="footer-links" hidden>
+                    <a href="#">Términos de uso</a>
+                    <a href="#">Política de privacidad</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://dev-bit-oficial.github.io/vota-ya/script.js"></script>
+</body>
+</html>
