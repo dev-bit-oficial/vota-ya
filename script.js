@@ -11,8 +11,8 @@ const resultadosIniciales = {
 // Función para verificar si el usuario ha iniciado sesión
 function checkLogin() {
     const userData = localStorage.getItem('user');
-    if (!userData && currentPage === 'votar.html') {
-        window.location.href = 'login.html';
+    if (!userData && currentPage === 'https://dev-bit-oficial.github.io/vota-ya/votar') {
+        window.location.href = 'https://dev-bit-oficial.github.io/vota-ya/login';
     }
     return userData ? JSON.parse(userData) : null;
 }
@@ -62,7 +62,7 @@ function handleLogin(event) {
         localStorage.setItem('user', JSON.stringify(user));
         
         // Redirigir a la página de votación
-        window.location.href = 'votar.html';
+        window.location.href = 'https://dev-bit-oficial.github.io/vota-ya/votar';
     }, 1500);
 }
 
@@ -70,7 +70,7 @@ function handleLogin(event) {
 function handleLogout() {
     localStorage.removeItem('user');
     localStorage.removeItem('voto');
-    window.location.href = 'index.html';
+    window.location.href = 'https://dev-bit-oficial.github.io/vota-ya/';
 }
 
 // Función para habilitar/deshabilitar el botón de voto
@@ -168,12 +168,12 @@ function initPage() {
         
         // Si ya está logueado, redirigir a votar
         if (user) {
-            window.location.href = 'votar.html';
+            window.location.href = 'https://dev-bit-oficial.github.io/vota-ya/votar';
         }
     }
     
     // Página de votación
-    if (currentPage === 'votar.html') {
+    if (currentPage === 'https://dev-bit-oficial.github.io/vota-ya/votar') {
         // Actualizar información del usuario
         updateUserInfo(user);
         
